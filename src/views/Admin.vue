@@ -12,12 +12,12 @@
 
     <form @submit.prevent.stop="handleSubmit">
       <div class="form-wrapper mt-5">
-        <label for="email">帳號</label>
+        <label for="account">帳號</label>
         <div>
           <input
-            id="email"
-            v-model="email"
-            name="email"
+            id="account"
+            v-model="account"
+            name="account"
             type="text"
             class="form"
             placeholder="請輸入帳號"
@@ -63,7 +63,7 @@
 export default {
   data() {
     return {
-      email: "",
+      account: "",
       password: "",
     };
   },
@@ -71,7 +71,7 @@ export default {
     handleSubmit() {
       console.log(
         JSON.stringify({
-          email: this.email,
+          account: this.account,
           password: this.password,
         })
       );
